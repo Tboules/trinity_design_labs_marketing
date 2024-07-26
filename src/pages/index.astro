@@ -1,0 +1,25 @@
+---
+import Layout from '../layouts/Layout.astro';
+import HeroThreeD from '../components/hero-three-d.tsx'
+---
+
+<Layout title="Welcome to Astro.">
+	<main>
+    <div class='animation-container'>
+      <HeroThreeD client:load />
+    </div>
+    <div>
+      <h1>Hello World</h1>
+    </div>
+	</main>
+</Layout>
+
+<style>
+  p {
+    font-size: 60px;
+  }
+
+  .animation-container {
+    height: 100vh;
+  }
+</style>
