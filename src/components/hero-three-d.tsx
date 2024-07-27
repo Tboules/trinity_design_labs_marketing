@@ -75,7 +75,7 @@ const Sphere: React.FC<SphereProps> = ({
 
 const Scene: React.FC = () => {
   return (
-    <Canvas style={{ background: "#222338" }} camera={{ position: [0, 0, 3] }}>
+    <Canvas style={{}} camera={{ position: [0, 0, 3] }}>
       <ambientLight />
       <pointLight position={[10, 10, 10]} />
       {[...Array(25)].map((_, i) => {
@@ -100,4 +100,10 @@ const Scene: React.FC = () => {
   );
 };
 
-export default Scene;
+export default function HeroThreeD() {
+  return (
+    <div style={{ width: "100%", height: "100%" }}>
+      <Scene />
+    </div>
+  );
+}
