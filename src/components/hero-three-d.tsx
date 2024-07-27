@@ -62,7 +62,7 @@ const Sphere: React.FC<SphereProps> = ({
   return (
     <>
       <mesh ref={mesh}>
-        <sphereGeometry args={[0.02, 32, 32]} />
+        <sphereGeometry args={[0.009, 32, 32]} />
         <meshStandardMaterial color="#FFFFFF" />
       </mesh>
       <line ref={trailRef}>
@@ -75,7 +75,7 @@ const Sphere: React.FC<SphereProps> = ({
 
 const Scene: React.FC = () => {
   return (
-    <Canvas style={{ background: "#222338" }} camera={{ position: [0, 0, 5] }}>
+    <Canvas style={{ background: "#222338" }} camera={{ position: [0, 0, 3] }}>
       <ambientLight />
       <pointLight position={[10, 10, 10]} />
       {[...Array(25)].map((_, i) => {
@@ -95,7 +95,7 @@ const Scene: React.FC = () => {
           />
         );
       })}
-      <OrbitControls />
+      {/* <OrbitControls /> */}
     </Canvas>
   );
 };
